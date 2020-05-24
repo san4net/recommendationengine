@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 //@NoArgsConstructor
 @Builder
 public class UserDetail  {
-	public static final UserDetail DUMMY = new UserDetail("",Gender.FEMALE,-1,new HashSet());
+	public static final UserDetail DUMMY = new UserDetail("",Gender.Female,-1,new HashSet());
 	private String name;
 	private Gender gender;
 	private int age;

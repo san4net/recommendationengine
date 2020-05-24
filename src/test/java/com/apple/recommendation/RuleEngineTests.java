@@ -25,18 +25,18 @@ public class RuleEngineTests {
 	@Autowired
 	private RecommendationController recommendationController;
 	
-	private UserDetail u1 = newUser("userA", 25, Gender.FEMALE, 
+	private UserDetail u1 = newUser("userA", 25, Gender.Female, 
 			Sets.newHashSet(Interest.Cricket));
-	private UserDetail u2 = newUser("userB", 27, Gender.MALE,
+	private UserDetail u2 = newUser("userB", 27, Gender.Male,
 			Sets.newHashSet(Interest.Cricket,
 			Interest.Football, 
 			Interest.Movies));
-	private UserDetail u3 = newUser("userC", 26, Gender.MALE, Sets.newHashSet(
+	private UserDetail u3 = newUser("userC", 26, Gender.Male, Sets.newHashSet(
 			Interest.Movies, Interest.Tennis, Interest.Cricket, 
 			Interest.Football));
-	private UserDetail u4 = newUser("userD", 24, Gender.FEMALE, Sets.newHashSet(Interest.Tennis, Interest.Cricket, 
+	private UserDetail u4 = newUser("userD", 24, Gender.Female, Sets.newHashSet(Interest.Tennis, Interest.Cricket, 
 			Interest.Football, Interest.Badminton));
-	private UserDetail u5 = newUser("userE", 32, Gender.FEMALE, Sets.newHashSet(Interest.Cricket,
+	private UserDetail u5 = newUser("userE", 32, Gender.Female, Sets.newHashSet(Interest.Cricket,
 			Interest.Football, 
 			Interest.Movies,
 			Interest.Badminton));
@@ -53,9 +53,7 @@ public class RuleEngineTests {
 	@Test
 	public void testUserRecommendation() {
 		ResponseEntity<List<String>> res = recommendationController.getRecommendation(u2.getName(), 2);
-		System.out.println("got this " + res.getBody());
-
-		assertTrue(res.getBody().contains(u2.getName()));
+		assertTrue(res.getBody().contains(u1.getName()));
 	}
 	
 	

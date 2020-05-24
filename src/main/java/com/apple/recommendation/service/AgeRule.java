@@ -22,5 +22,11 @@ public class AgeRule implements RecommendationRule {
 		.collect(Collectors.toList());
 
 	}
+	
+	
+	@Override
+	public int comparableField(UserDetail user) {
+		return user.getAge();
+	}
 
 }

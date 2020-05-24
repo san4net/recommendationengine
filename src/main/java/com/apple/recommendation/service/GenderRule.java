@@ -21,4 +21,10 @@ public class GenderRule implements RecommendationRule {
 		
 	}
 
+  @Override
+  public int comparableField(UserDetail user) {
+			return user.getGender().ordinal();
+  	}	
+	
+
 }

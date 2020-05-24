@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContext;
 public class RecommendationEngine  implements CommandLineRunner{
 	
 	 @Autowired
-	 private ApplicationContext appContext;
+	private ApplicationContext appContext;
 	 
 	public static void main(String[] args) {
 		SpringApplication.run(RecommendationEngine.class, args);
@@ -19,7 +19,6 @@ public class RecommendationEngine  implements CommandLineRunner{
 	
 	@Override
 	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
 		//org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext
 		
 	}

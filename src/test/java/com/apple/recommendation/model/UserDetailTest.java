@@ -35,7 +35,7 @@ class UserDetailTest {
 		ud = UserDetail.builder()
 				.name("santi")
 				.age(22)
-				.gender(Gender.MALE)
+				.gender(Gender.Male)
 				.interest(Sets.newHashSet(Lists.newArrayList(Interest.Football)))
 				.build();
 	}
@@ -44,7 +44,7 @@ class UserDetailTest {
 	void testAllFields() {
 		assertEquals("santi", ud.getName());
 		assertEquals(22, ud.getAge());
-		assertEquals(Gender.MALE, ud.getGender());
+		assertEquals(Gender.Male, ud.getGender());
 		assertEquals(Sets.newHashSet(Lists.newArrayList(Interest.Football)), ud.getInterest());
 	}
 	

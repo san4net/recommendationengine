@@ -28,16 +28,11 @@ public class ValidationServiceTest {
 	private UserDetail ud  = UserDetail.builder()
 			.name("santi")
 			.age(22)
-			.gender(Gender.MALE)
+			.gender(Gender.Male)
 			.interest(Sets.newSet(Interest.Football))
 			.build();
 	
-	private UserDetail mockTrade = Mockito.mock(UserDetail.class);
 	
-	@BeforeEach
-	void setUp() throws Exception {
-		reset(mockTrade);
-	}
 
 	@AfterEach
 	void tearDown() throws Exception {
@@ -54,40 +49,7 @@ public class ValidationServiceTest {
 //			tradeStoreController.addTrade(mockTrade);
 //		});
 //	}
-//	
-//	@Test
-//	@Order(2)
-//	void testMaturityFail() {
-//		Mockito.when(mockTrade.getTradeId()).thenReturn(trade.getTradeId());
-//		Mockito.when(mockTrade.getVersion()).thenReturn(trade.getVersion()+1);
-//		Mockito.when(mockTrade.getMaturityDate()).thenReturn(plusDay(-1));
-//		assertThrows(RuntimeException.class, () -> {
-//			tradeStoreController.addTrade(mockTrade);
-//		});
-//	}
-//	
-//	@Test
-//	@Order(3)
-//	void testVersionValidationPass() {
-//		Mockito.when(mockTrade.getTradeId()).thenReturn(trade.getTradeId());
-//		Mockito.when(mockTrade.getVersion()).thenReturn(trade.getVersion()+1);
-//		Mockito.when(mockTrade.getMaturityDate()).thenReturn(trade.getMaturityDate());
-//		assertDoesNotThrow(()->tradeStoreController.addTrade(mockTrade));
-//	}
-//	
-//	@Test
-//	@Order(4)
-//	void testExpiredTrade() {
-//		UserDetail t = tradeStoreService.get(trade.getTradeId());
-//		t.setMaturityDate(plusDay(-1));
-//		RecommendationServiceImpl temp = (RecommendationServiceImpl) tradeStoreService;
-//		temp.markExpired();
-//		
-//		Mockito.when(mockTrade.getTradeId()).thenReturn(trade.getTradeId());
-//		Mockito.when(mockTrade.getVersion()).thenReturn(trade.getVersion()+1);
-//		Mockito.when(mockTrade.getMaturityDate()).thenReturn(plusDay(1));
-//		assertThrows(RuntimeException.class, ()->tradeStoreController.addTrade(mockTrade));
-//	}
+
 	
 
 }

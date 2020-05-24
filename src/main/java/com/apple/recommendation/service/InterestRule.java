@@ -24,5 +24,10 @@ public class InterestRule implements RecommendationRule {
 		.collect(Collectors.toList());
 
 	}
+	
+	@Override
+	public int comparableField(UserDetail user) {
+		return user.getInterest().size();
+	}	
 
 }

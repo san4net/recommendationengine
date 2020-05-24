@@ -1,9 +1,9 @@
 package com.apple.recommendation.model;
 
 public enum Gender {
- MALE, FEMALE;
+ Male, Female;
 
 	public Gender opposite() {
-		return this == MALE ? FEMALE : MALE;
+		return this == Male ? Female : Male;
 	}
 }
