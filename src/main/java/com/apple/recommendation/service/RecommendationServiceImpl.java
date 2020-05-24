@@ -61,13 +61,32 @@ public class RecommendationServiceImpl implements RecommendationService<UserDeta
 			if(filtered.size()<=num) {
 				break;
 			}
+			if(areTopDiferrent(filtered, num, r)) {
+				break;
+			}
 			
 		}
 		
 		if(filtered.size()!=0 && filtered.size()>num) {
 			filtered = filtered.subList(0, num);
 		}
+		
 		return filtered.stream().map(UserDetail::getName).collect(Collectors.toList());
+	}
+	
+	private boolean areTopDiferrent(List<UserDetail> users, int top, RecommendationRule rule) {
+		int differentCount = 0;
+
+		for (int i = 0; i < users.size() - 2; i++) {
+			if (Integer.compare(rule.comparableField(users.get(i)), rule.comparableField(users.get(i + 1))) != 0) {
+				differentCount++;
+			}
+			if (differentCount >= top)
+				return true;
+		}
+
+		return false;
+
 	}
 	
 	

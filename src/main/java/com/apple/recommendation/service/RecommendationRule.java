@@ -15,4 +15,6 @@ public interface RecommendationRule extends Comparable<RecommendationRule> {
 	default int compareTo(RecommendationRule o) {
 		return Integer.compare(rank(), o.rank());
 	}
+	
+	int comparableField(UserDetail user);
 }

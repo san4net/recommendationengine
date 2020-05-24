@@ -2,9 +2,6 @@ package com.apple.recommendation;
 
 import java.util.List;
 
-import com.apple.recommendation.exception.InvalidVersion;
-import com.apple.recommendation.exception.TradeNotFoundException;
-import com.apple.recommendation.model.UserDetail;
 import com.apple.recommendation.service.RecommendationRule;
 /**
  * 

@@ -7,13 +7,10 @@ import java.util.function.Predicate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.apple.recommendation.exception.InvalidVersion;
 import com.apple.recommendation.model.UserDetail;
 
 @Service
 public class ValidationService {
-//	@Autowired
-//	private TradeStoreServiceImpl tradeStoreService;
 
 	
 	private Predicate<UserDetail> nameValidator = (UserDetail t)->{
