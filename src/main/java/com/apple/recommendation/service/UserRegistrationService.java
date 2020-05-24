@@ -1,4 +1,4 @@
-package com.apple.recommendation;
+package com.apple.recommendation.service;
 
 import java.util.Collection;
 import java.util.List;

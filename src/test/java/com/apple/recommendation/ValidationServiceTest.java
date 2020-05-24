@@ -1,12 +1,8 @@
 package com.apple.recommendation;
 
-import static org.mockito.Mockito.reset;
-
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.TestMethodOrder;
-import org.mockito.Mockito;
 import org.mockito.internal.util.collections.Sets;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +11,7 @@ import com.apple.recommendation.controller.UserRegisrationController;
 import com.apple.recommendation.model.Gender;
 import com.apple.recommendation.model.Interest;
 import com.apple.recommendation.model.UserDetail;
+import com.apple.recommendation.service.RecommendationService;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

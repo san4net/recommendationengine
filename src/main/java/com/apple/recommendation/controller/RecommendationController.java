@@ -9,8 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.apple.recommendation.RecommendationService;
 import com.apple.recommendation.model.UserDetail;
+import com.apple.recommendation.service.RecommendationService;
 import com.google.common.collect.Lists;
 
 @RestController

@@ -1,8 +1,6 @@
-package com.apple.recommendation;
+package com.apple.recommendation.service;
 
 import java.util.List;
-
-import com.apple.recommendation.service.RecommendationRule;
 /**
  * 
  * @author santoshkumar

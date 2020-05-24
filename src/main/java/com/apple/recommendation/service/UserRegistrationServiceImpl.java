@@ -11,8 +11,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
-import com.apple.recommendation.RecommendationService;
-import com.apple.recommendation.UserRegistrationService;
 import com.apple.recommendation.model.UserDetail;
 
 @Service

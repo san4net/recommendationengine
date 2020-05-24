@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.apple.recommendation.RecommendationService;
-import com.apple.recommendation.UserRegistrationService;
 import com.apple.recommendation.model.UserDetail;
+import com.apple.recommendation.service.RecommendationService;
+import com.apple.recommendation.service.UserRegistrationService;
 import com.apple.recommendation.service.ValidationService;
 
 
