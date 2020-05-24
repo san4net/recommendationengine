@@ -13,8 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
-import com.apple.recommendation.RecommendationService;
-import com.apple.recommendation.UserRegistrationService;
 import com.apple.recommendation.model.UserDetail;
 
 @Service
