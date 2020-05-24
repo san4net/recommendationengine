@@ -31,10 +31,15 @@ public class RecommendationServiceImpl implements RecommendationService<UserDeta
 
 	@Override
 	public List<String> getRecommendation(String userId, int top) {
+		UserDetail ud = userRegistration.get(userId);
+		if (ud == null) {
+			throw new RuntimeException(String.format("unknow user %s", userId));
+		}
+		
 		List<UserDetail> users = userRegistration.getAll().stream().filter(u -> {
 			return u.getName() != userId;
 		}).collect(Collectors.toList());
-
+		
 		return applyRule(users, userRegistration.get(userId), top);
 	}
 

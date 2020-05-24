@@ -28,7 +28,7 @@ public class RecommendationController {
 			ud = recommendationService.getRecommendation(userId, top);
 		} catch (Exception e) {
 			log.error("error {}", e);
-			return ResponseEntity.ok(Lists.newArrayList());
+			return ResponseEntity.badRequest().body(Lists.newArrayList(e.getMessage()));
 		}
 		return ResponseEntity.ok(ud);
 	}
